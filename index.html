@@ -163,18 +163,19 @@
 
     <div class="form-alani">
         <h2 style="text-align: center; margin-top: 0; color: #2d3748;">Bana Mesaj Gönderin ✉️</h2>
-        <form onsubmit="formuGonder(event)">
+        <!-- Formspree kodunuz başarıyla entegre edildi -->
+        <form id="iletisimFormu" action="https://formspree.io" method="POST" onsubmit="formuGonder(event)">
             <div class="form-grup">
                 <label>Adınız Soyadınız:</label>
-                <input type="text" id="isimInput" placeholder="Örn: Ahmet Yılmaz" required>
+                <input type="text" id="isimInput" name="name" placeholder="Örn: Ahmet Yılmaz" required>
             </div>
             <div class="form-grup">
                 <label>E-Posta Adresiniz:</label>
-                <input type="email" id="epostaInput" placeholder="ahmet@ornek.com" required>
+                <input type="email" id="epostaInput" name="email" placeholder="ahmet@ornek.com" required>
             </div>
             <div class="form-grup">
                 <label>Mesajınız:</label>
-                <textarea id="mesajInput" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                <textarea id="mesajInput" name="message" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
             </div>
             <button type="submit" class="gonder-buton">Mesajı Gönder 🚀</button>
         </form>
@@ -183,11 +184,26 @@
     <script>
         function formuGonder(event) {
             event.preventDefault();
+            
+            let form = document.getElementById("iletisimFormu");
             let isim = document.getElementById("isimInput").value;
-            alert("Teşekkürler " + isim + "! Mesajınız başarıyla kod sistemine ulaştı. 🎉");
-            document.getElementById("isimInput").value = "";
-            document.getElementById("epostaInput").value = "";
-            document.getElementById("mesajInput").value = "";
+            
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert("Teşekkürler " + isim + "! Mesajınız başarıyla e-posta adresime ulaştı. 🎉");
+                    form.reset();
+                } else {
+                    alert("Bir sorun oluştu, lütfen sistem ayarlarını kontrol edin.");
+                }
+            }).catch(error => {
+                alert("Mesaj gönderilirken bir hata oluştu.");
+            });
         }
     </script>
 
