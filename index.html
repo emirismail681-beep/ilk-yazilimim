@@ -2,9 +2,8 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Benim Modern İnternet Sitem 🌐</title>
+    <title>Emir İsmail - Portfolyo 🌐</title>
     <style>
-        /* Modern ve Şık Tasarım Ayarları */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +11,6 @@
             color: #2d3748;
         }
 
-        /* En Üst Menü Çubuğu (Header) */
         .menu-cubugu {
             background-color: #1a202c;
             padding: 20px;
@@ -32,12 +30,11 @@
             color: #3182ce;
         }
 
-        /* Ana Karşılama Bölümü (Hero Section) */
         .karsilama {
             background: linear-gradient(135deg, #3182ce, #2b6cb0);
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
         }
 
         .karsilama h1 {
@@ -45,7 +42,6 @@
             margin-bottom: 10px;
         }
 
-        /* İçerik Kartları */
         .icerik-alani {
             max-width: 1000px;
             margin: 40px auto;
@@ -63,63 +59,135 @@
             flex: 1;
             text-align: center;
             border-top: 4px solid #3182ce;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        /* Etkileşimli Buton */
-        .buton {
+        .kart-buton {
             background-color: #3182ce;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            text-decoration: none;
+            padding: 10px 15px;
             border-radius: 5px;
-            cursor: pointer;
             font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
             transition: 0.3s;
         }
 
-        .buton:hover {
+        .kart-buton:hover {
             background-color: #2b6cb0;
+        }
+
+        .form-alani {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #48bb78;
+        }
+
+        .form-grup {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-grup label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        .form-grup input, .form-grup textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .gonder-buton {
+            background-color: #48bb78;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gonder-buton:hover {
+            background-color: #38a169;
         }
     </style>
 </head>
 <body>
 
-    <!-- Üst Menü -->
     <div class="menu-cubugu">
         <a href="#">Ana Sayfa</a>
-        <a href="#">Hakkımda</a>
         <a href="#">Projelerim</a>
         <a href="#">İletişim</a>
     </div>
 
-    <!-- Karşılama Alanı -->
     <div class="karsilama">
-        <h1>Kişisel Web Siteme Hoş Geldiniz! 🚀</h1>
-        <p style="font-size: 20px;">Sıfırdan kodlayarak tasarladığım ilk profesyonel internet sitesi projesi.</p>
-        <br>
-        <button class="buton" onclick="mesajGoster()">Daha Fazla Bilgi ✨</button>
+        <h1>Emir İsmail'in Web Portfolyosu 🚀</h1>
+        <p style="font-size: 20px;">Kendi geliştirdiğim yasal yazılım projelerimi buradan inceleyebilirsiniz.</p>
     </div>
 
-    <!-- Kartlar / Hizmetler Bölümü -->
+    <!-- YENİLENEN PROJE KARTLARI -->
     <div class="icerik-alani">
         <div class="kart">
-            <h3>💻 Web Tasarım</h3>
-            <p>HTML, CSS ve JavaScript kullanarak modern görünümlü internet siteleri tasarlıyorum.</p>
+            <div>
+                <h3>🕹️ Gelişmiş Tıklama Oyunu</h3>
+                <p>Saniyede otomatik puan kazandıran madencilerin, seviye atlama sisteminin ve konfeti efektlerinin olduğu yerel JavaScript oyunum.</p>
+            </div>
+            <a href="oyun.html" class="kart-buton">Oyunu Başlat ⚡</a>
         </div>
+        
         <div class="kart">
-            <h3>🕹️ Oyun Geliştirme</h3>
-            <p>Web tabanlı mini oyunlar ve tıklama döngüleri üzerine yazılımlar üretiyorum.</p>
+            <div>
+                <h3>🌐 Kişisel Web Sitesi</h3>
+                <p>Şu an içinde bulunduğunuz, HTML ve CSS teknolojileriyle sıfırdan tasarlanmış modern kurumsal arayüz projesi.</p>
+            </div>
+            <a href="#" class="kart-buton" style="background-color: #a0aec0; cursor: not-allowed;">Zaten Buradasınız 👀</a>
         </div>
-        <div class="kart">
-            <h3>⚡ Hızlı Altyapı</h3>
-            <p>Temiz kodlama teknikleriyle tarayıcılarda ışık hızında açılan sayfalar yapıyorum.</p>
-        </div>
+    </div>
+
+    <div class="form-alani">
+        <h2 style="text-align: center; margin-top: 0; color: #2d3748;">Bana Mesaj Gönderin ✉️</h2>
+        <form onsubmit="formuGonder(event)">
+            <div class="form-grup">
+                <label>Adınız Soyadınız:</label>
+                <input type="text" id="isimInput" placeholder="Örn: Ahmet Yılmaz" required>
+            </div>
+            <div class="form-grup">
+                <label>E-Posta Adresiniz:</label>
+                <input type="email" id="epostaInput" placeholder="ahmet@ornek.com" required>
+            </div>
+            <div class="form-grup">
+                <label>Mesajınız:</label>
+                <textarea id="mesajInput" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+            </div>
+            <button type="submit" class="gonder-buton">Mesajı Gönder 🚀</button>
+        </form>
     </div>
 
     <script>
-        function mesajGoster() {
-            alert("Bu internet sitesi tamamen bilgisayarın kendi yerel kodları ile çalışmaktadır!");
+        function formuGonder(event) {
+            event.preventDefault();
+            let isim = document.getElementById("isimInput").value;
+            alert("Teşekkürler " + isim + "! Mesajınız başarıyla kod sistemine ulaştı. 🎉");
+            document.getElementById("isimInput").value = "";
+            document.getElementById("epostaInput").value = "";
+            document.getElementById("mesajInput").value = "";
         }
     </script>
 
