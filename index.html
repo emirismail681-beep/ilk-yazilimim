@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Benim Modern İnternet Sitem 🌐</title>
+    <style>
+        /* Modern ve Şık Tasarım Ayarları */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+
+        /* En Üst Menü Çubuğu (Header) */
+        .menu-cubugu {
+            background-color: #1a202c;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu-cubugu a {
+            color: #cbd5e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .menu-cubugu a:hover {
+            color: #3182ce;
+        }
+
+        /* Ana Karşılama Bölümü (Hero Section) */
+        .karsilama {
+            background: linear-gradient(135deg, #3182ce, #2b6cb0);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .karsilama h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        /* İçerik Kartları */
+        .icerik-alani {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .kart {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex: 1;
+            text-align: center;
+            border-top: 4px solid #3182ce;
+        }
+
+        /* Etkileşimli Buton */
+        .buton {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .buton:hover {
+            background-color: #2b6cb0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Menü -->
+    <div class="menu-cubugu">
+        <a href="#">Ana Sayfa</a>
+        <a href="#">Hakkımda</a>
+        <a href="#">Projelerim</a>
+        <a href="#">İletişim</a>
+    </div>
+
+    <!-- Karşılama Alanı -->
+    <div class="karsilama">
+        <h1>Kişisel Web Siteme Hoş Geldiniz! 🚀</h1>
+        <p style="font-size: 20px;">Sıfırdan kodlayarak tasarladığım ilk profesyonel internet sitesi projesi.</p>
+        <br>
+        <button class="buton" onclick="mesajGoster()">Daha Fazla Bilgi ✨</button>
+    </div>
+
+    <!-- Kartlar / Hizmetler Bölümü -->
+    <div class="icerik-alani">
+        <div class="kart">
+            <h3>💻 Web Tasarım</h3>
+            <p>HTML, CSS ve JavaScript kullanarak modern görünümlü internet siteleri tasarlıyorum.</p>
+        </div>
+        <div class="kart">
+            <h3>🕹️ Oyun Geliştirme</h3>
+            <p>Web tabanlı mini oyunlar ve tıklama döngüleri üzerine yazılımlar üretiyorum.</p>
+        </div>
+        <div class="kart">
+            <h3>⚡ Hızlı Altyapı</h3>
+            <p>Temiz kodlama teknikleriyle tarayıcılarda ışık hızında açılan sayfalar yapıyorum.</p>
+        </div>
+    </div>
+
+    <script>
+        function mesajGoster() {
+            alert("Bu internet sitesi tamamen bilgisayarın kendi yerel kodları ile çalışmaktadır!");
+        }
+    </script>
+
+</body>
+</html>
